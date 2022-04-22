@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greyDark"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Add a store"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:id="@+id/et_store_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:hint="Input store name"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/greyLight"
+        android:padding="16dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_add_store_sbs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        app:cornerRadius="16dp"
+        android:text="Add Store"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/limeDark"/>
+
+</LinearLayout>

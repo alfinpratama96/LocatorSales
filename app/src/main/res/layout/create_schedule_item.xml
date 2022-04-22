@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cv_day"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="1.5dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="@color/limeDark">
+
+    <TextView
+        android:id="@+id/tv_day"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="4dp"
+        tools:text="Monday"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+</androidx.cardview.widget.CardView>

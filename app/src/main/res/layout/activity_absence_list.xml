@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greyLight"
+    tools:context=".presentation.order.list.OrderListActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_absence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/limeLight"
+        android:src="@drawable/ic_camera_alt_24"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/greyDark"
+        android:contentDescription="Add Absence" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_absence_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:listitem="@layout/absence_item" />
+
+    <LinearLayout
+        android:id="@+id/ll_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/absence" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="No recorded Absence. \nClick the camera below to absence"
+            android:textColor="#80FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_add_absence"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_camera_alt_24"
+            app:tint="@color/limeLight"/>
+
+        <ProgressBar
+            android:id="@+id/pb_loading_absence_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:indeterminateTint="@color/limeDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

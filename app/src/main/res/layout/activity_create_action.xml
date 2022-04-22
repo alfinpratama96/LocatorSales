@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greyLight"
+    android:padding="16dp"
+    tools:context=".presentation.activity.create.CreateActionActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Input your activity"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_activity"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/white"
+            android:gravity="top"
+            android:hint="Type your activity here..."
+            android:textColor="@color/white"
+            android:textColorHint="@color/greyDark"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_add_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Activity"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/limeDark"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pb_loading_add_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/limeLight"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

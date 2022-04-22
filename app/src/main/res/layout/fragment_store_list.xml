@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/greyLight"
+    tools:context=".presentation.store.list.StoreListFragment">
+
+    <TextView
+        android:id="@+id/tv_store_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Store List"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_store_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_store_list_title"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:listitem="@layout/store_item" />
+
+    <LinearLayout
+        android:id="@+id/ll_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/store" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Store is empty. \nClick the bottom button below to add store"
+            android:textColor="#80FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            android:text="Add Store"
+            android:textColor="@color/white"/>
+
+        <ProgressBar
+            android:id="@+id/pb_loading_store_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:indeterminateTint="@color/limeDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/limeLight"
+        android:src="@drawable/ic_store_24"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/greyDark"
+        android:contentDescription="Add Order" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

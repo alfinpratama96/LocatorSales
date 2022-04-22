@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greyLight"
+    tools:context=".presentation.auth.login.LoginActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Locator App"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.278" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/et_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_login_24"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        android:hint="Username"
+        android:textColor="@color/white"
+        android:textColorHint="#80FFFFFF"
+        android:textSize="14sp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColorHint="#80FFFFFF"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/et_username" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/greyPrimary"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+    <ProgressBar
+        android:id="@+id/pb_loading_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/greyPrimary"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_password"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.task.locatorptm">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".presentation.LocatorApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LocatorPTM"
+        android:requestLegacyExternalStorage="true">
+        <activity
+            android:name=".presentation.schedule.create.CreateScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.schedule.list.ScheduleListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.activity.create.CreateActionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.activity.list.ActionListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.absence.detail.DetailAbsenceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.absence.create.CreateAbsenceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.absence.list.AbsenceListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.order.list.OrderListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.store.menu.StoreMenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.history.pinlocation.GoogleMapsActivity"
+            android:exported="false" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+
+        <activity
+            android:name=".presentation.order.create.CreateOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.auth.login.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.LocatorPTM.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.LocatorPTM.NoActionBar" />
+    </application>
+
+</manifest>
